@@ -16,27 +16,19 @@ use Illuminate\Support\Facades\Route;
 
 //Route Bawaan Laravel
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
+Route::get('/', function () {
+return view('welcome');
+});
 
 Route::get('/home', function () {
     return view('halaman_home');
 });
 
-/*
 Route::get('/mahasiswa', function () {
     return View('kampus.mahasiswa');
 });
-
-
 Route::get('/mahasiswa', function () {
     return View('kampus.mahasiswa',["mahasiswa01" => "Farah Salsabila"]);
-});
-
-Route::get('/mahasiswa', function () {
-    return View('kampus.mahasiswa',["mahasiswa01" => "Maulana Sultansyah"]);
 });
 
 
@@ -61,18 +53,20 @@ return view('kampus.mahasiswa',$arrMahasiswa);
 
 Route::get('/mahasiswa', function () {
     $arrMahasiswa = ["Farah Salsabila", "Syadzwina Sahara","Deliana Putri","Indra Kenz"];
-    return view('kampus.mahasiswa',['mahasiswa'=>  $arrMahasiswa]);
+    return view('kampus.mahasiswa',['mahasiswa'=> $arrMahasiswa]);
 });
 
 Route::get('/mahasiswa', function () {
     return view('kampus.mahasiswa')->with ('mahasiswa01','Risa Lestari');
 });
+*/
 
 
 Route::get('/mahasiswa', function () {
     $arrMahasiswa=["Doni sadikin","Syadzwina sahara","Deliana Putri","Indra Kenz"];
     return view('kampus.mahasiswa')->with ('mahasiswa',$arrMahasiswa);
 });
+
 
     Route::get('/mahasiswa', function () {
         return view('kampus.mahasiswa')
@@ -232,4 +226,3 @@ Route::get('mahasiswa/andi',function(){
 Route::get('/mahasiswa/andi',function(){
     echo"Halaman mahasiswa andi";
 });
-*/
