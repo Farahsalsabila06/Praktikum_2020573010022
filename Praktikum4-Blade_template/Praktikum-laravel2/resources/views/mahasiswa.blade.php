@@ -8,7 +8,7 @@
     <title> Data Mahasiswa</title>
 </head>
 <body>
-    {{-- tanpa kode blade --}}
+    {{-- tanpa kode blade
     <h1>Data Mahasiswa</h1>
     <div class="container text-center mt-3 pt-3 bf-white">
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">
@@ -17,9 +17,9 @@
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">
             <?php echo $nilai?>
         </h1>
-    </div> 
+    </div>  --}}
  
-    {{-- menggunakan kode blade --}}
+    {{-- menggunakan kode blade
     <h1>Data Mahasiswa</h1>
     <div class="container text-center mt-3 pt-3 bf-white">
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">
@@ -28,10 +28,10 @@
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">
             {{ $nilai }}
         </h1>
-    </div> 
+    </div>   --}}
 
 
-    {{-- menggunakan kode blade {{ !! dan !! }} --}}
+   {{-- menggunakan kode blade {{ !! dan !! }}
     <h1>Data Mahasiswa</h1>
     <div class="container text-center mt-3 pt-3 bf-white">
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">
@@ -40,9 +40,9 @@
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">
             {{ !! $nilai !!}}
         </h1>
-    </div> 
+    </div>  --}}
 
-     {{-- Kondisi if else --}}
+     {{-- Kondisi if else
      <h1>Data Mahasiswa</h1>
      <div class="container text-center mt-3 pt-3 bf-white">
          <h1 class="bg-dark px-3 py-1 text-white d-inline-block">{{ $nama }}</h1>
@@ -57,9 +57,9 @@
                 Selamat anda lulus
                 </div>
             @endif
-        </div>
+        </div>  --}}
 
-         {{-- Kondisi if else 2--}}
+         {{-- Kondisi if else
      <h1>Data Mahasiswa</h1>
      <div class="container text-center mt-3 pt-3 bf-white">
          <h1 class="bg-dark px-3 py-1 text-white d-inline-block">{{ $nama }}</h1>
@@ -70,10 +70,10 @@
              @elseif(($nilai >=50) and ($nilai<=100))
              <div class="alert alert-dark d-inline-block">Selamat anda lulus</div>
             @endif
-        </div>
+        </div>  --}}
         
 
-        {{-- Kondisi switch --}}
+        {{-- Kondisi switch
      <h1>Data Mahasiswa</h1>
      <div class="container text-center mt-3 pt-3 bf-white">
          <h1 class="bg-dark px-3 py-1 text-white d-inline-block">{{ $nama }}</h1>
@@ -82,69 +82,94 @@
             @switch($nilai)
             @case(0)
          <div class="alert alert-danger d-inline-block">Tidak ikut ujian</div>
-            @switch
+            @break
             @case(75)
              <div class="alert alert-success d-inline-block">Lumanyan</div>
-             @switch
+             @break
             @case(100)
              <div class="alert alert-success d-inline-block">Sempurna</div>
-             @switch
+             @break
             @default
              <div class="alert alert-dark d-inline-block">nilai tidak valid</div>
             @endswitch
-        </div>
+        </div>  --}}
 
-        {{-- perulangan for--}}
+        {{-- perulangan for
         <div class="container text-center mt-3 pt-3 bf-white">
-            @for ($i=0;$i<5;$++)
+            @for ($i=0;$i<5; $i++)
             <div class="alert alert-info d-inline-block">  Laravel </div>
             @endfor
-            </div>
+            </div>  --}}
 
-            {{-- perulangan for2--}}
+            {{-- perulangan for2
         <div class="container text-center mt-3 pt-3 bf-white">
-            @for ($i=0;$i<5;$++)
+            @for ($i=0;$i<5;$i++)
             <div class="alert alert-info d-inline-block">{{ $i }}</div>
             @endfor
-            </div>
+            </div>  --}}
 
-            {{-- perulangan while--}}
+             {{-- perulangan while 
         <div class="container text-center mt-3 pt-3 bf-white">
            <?php $i=0;?>
            @while($i<5)
             <div class="alert alert-info d-inline-block"> {{ $i }} </div>
             <?php $i++?>
             @endwhile
-            </div>
+            </div> --}}
 
 
-    {{-- perulangan forelse --}}
+    {{-- perulangan foreach 1
     <div class="container text-center mt-3 pt-3 bf-white">
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">{{ $nama }}</h1>
         <br>
-        {{ 
         @foreach ($nilai as $val)
-        @if ($val>=0) and ($val <50)
-        <div class="alert alert-success d-inline-block">
+        <div class="alert alert-info d-inline-block">
+            {{ $val }} 
+            </div>
+                @endforeach
+        </div>    --}}
+
+            {{-- perulangan foreach
+    <div class="container text-center mt-3 pt-3 bf-white">
+        <h1 class="bg-dark px-3 py-1 text-white d-inline-block">{{ $nama }}</h1>
+        <br>
+        @foreach ($nilai as $val)
+        @if (($val>=0) and ($val <50))
+        <div class="alert alert-danger d-inline-block">
             {{ $val }} 
             </div>
             @elseif(($val>=50) and ($val <=100)) 
             <div class="alert alert-success d-inline-block">
             {{ $val }}
             </div>
-            @continue
             @endif
-            <div class="alert alert-success d-inline-block">Tidak ada data... </div>
-                {{ $val }} 
-                </div>
-                @endforelse
-        </div> 
+            @endforeach
+        </div>    --}}
 
-    {{-- contoh perintah @continue --}}
+        {{-- perulangan forelse
     <div class="container text-center mt-3 pt-3 bf-white">
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">{{ $nama }}</h1>
         <br>
-        {{ 
+        @forelse ($nilai as $val)
+        @if (($val>=0) and ($val <50))
+        <div class="alert alert-danger d-inline-block">
+            {{ $val }} 
+            </div>
+            @elseif(($val>=50) and ($val <=100)) 
+            <div class="alert alert-success d-inline-block">
+            {{ $val }}
+            </div>
+            @endif
+            @empty
+            
+            <div class="alert alert-success d-inline-block">tidak ada data...</div>
+            @endforelse
+        </div>    --}}
+
+    {{-- contoh perintah @continue
+    <div class="container text-center mt-3 pt-3 bf-white">
+        <h1 class="bg-dark px-3 py-1 text-white d-inline-block">{{ $nama }}</h1>
+        <br>
         @foreach ($nilai as $val)
         @if ($val<50)
         @continue
@@ -153,14 +178,12 @@
             {{ $val }} 
             </div>
             @endforeach
-            -}}
-    </div> 
+    </div>    --}}
 
-    {{-- contoh menggunakan perintah break --}}
+    {{-- contoh menggunakan perintah break
     <div class="container text-center mt-3 pt-3 bf-white">
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">{{ $nama }}</h1>
         <br>
-        {{ 
         @foreach ($nilai as $val)
         @if ($val<50)
         @break
@@ -169,14 +192,12 @@
             {{ $val }} 
             </div>
             @endforeach
-            -}}
-    </div> 
+    </div>   --}}
 
-    {{-- Baris komentar dan php mode --}}
+    {{-- Baris komentar dan php mode
     <div class="container text-center mt-3 pt-3 bf-white">
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">{{ $nama }}</h1>
         <br>
-        {{ 
         @foreach ($nilai as $val)
         @if ($val<50)
         @break
@@ -185,8 +206,7 @@
             {{ $val }} 
             </div>
             @endforeach
-            -}}
-    </div> 
+    </div>   --}}
 
     {{-- <div> copyright &copy; <?php echo date("Y"); ?>Program Studi Teknik Informatika - PNL </div> --}}
     </ol>

@@ -20,7 +20,6 @@ Route::get('/', function () {
 return view('welcome');
 });
 
-
 //  menampilkan data
 Route::get('/mahasiswa', function(){
     $nama='Farah Salsabila';
@@ -29,13 +28,13 @@ Route::get('/mahasiswa', function(){
 });
 
 
+
 Route::get('/mahasiswa', function(){
     $nama='<u>Farah Salsabila';
     $nilai=75;
     return view('mahasiswa',compact('nama','nilai'));
 });
 
-//kondisi if else
 Route::get('/mahasiswa', function(){
     $nama='Farah Salsabila';
     $nilai=75;
@@ -49,9 +48,11 @@ Route::get('/mahasiswa', function(){
     return view('mahasiswa',compact('nama','nilai'));
 });
 
+
 //perintah continue dan break
 Route::get('/mahasiswa', function(){
     $nama='Farah Salsabila';
     $nilai=[80,64,30,76,95];
     return view('mahasiswa',compact('nama','nilai'));
 });
+
