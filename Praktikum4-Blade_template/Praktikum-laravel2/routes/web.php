@@ -20,9 +20,38 @@ Route::get('/', function () {
 return view('welcome');
 });
 
-//  Blade template engine
+
+//  menampilkan data
 Route::get('/mahasiswa', function(){
     $nama='Farah Salsabila';
     $nilai=75;
-    return view('kampus.mahasiswa',compact('nama','nilai'));
+    return view('mahasiswa',compact('nama','nilai'));
+});
+
+
+Route::get('/mahasiswa', function(){
+    $nama='<u>Farah Salsabila';
+    $nilai=75;
+    return view('mahasiswa',compact('nama','nilai'));
+});
+
+//kondisi if else
+Route::get('/mahasiswa', function(){
+    $nama='Farah Salsabila';
+    $nilai=75;
+    return view('mahasiswa',compact('nama','nilai'));
+});
+
+//perulangan foreach
+Route::get('/mahasiswa', function(){
+    $nama='Farah Salsabila';
+    $nilai=[80,64,30,76,95];
+    return view('mahasiswa',compact('nama','nilai'));
+});
+
+//perintah continue dan break
+Route::get('/mahasiswa', function(){
+    $nama='Farah Salsabila';
+    $nilai=[80,64,30,76,95];
+    return view('mahasiswa',compact('nama','nilai'));
 });
