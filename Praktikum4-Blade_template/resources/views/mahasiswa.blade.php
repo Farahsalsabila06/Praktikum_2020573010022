@@ -17,9 +17,9 @@
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">
             <?php echo $nilai?>
         </h1>
-    </div>  --}}
+    </div>   --}}
  
-    {{-- menggunakan kode blade
+    {{-- menggunakan kode blade --}}
     <h1>Data Mahasiswa</h1>
     <div class="container text-center mt-3 pt-3 bf-white">
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">
@@ -28,7 +28,7 @@
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">
             {{ $nilai }}
         </h1>
-    </div>   --}}
+    </div>  
 
 
    {{-- menggunakan kode blade {{ !! dan !! }}

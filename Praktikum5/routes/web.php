@@ -20,6 +20,11 @@ Route::get('/', function () {
 return view('welcome');
 });
 
+Route::get('/web', function () {
+    return view('index');
+    });
+
+
 //  menampilkan data
 Route::get('/mahasiswa', function(){
     $nama='Farah Salsabila';
@@ -56,3 +61,22 @@ Route::get('/mahasiswa', function(){
     return view('mahasiswa',compact('nama','nilai'));
 });
 
+//Layout Blade Template Engine
+Route::get('/web',function(){
+    $books = [[
+        'id' => 2,
+        'telte' => 'Post Pertama',
+        'author' => 'Farah',
+        'publication'=> 'Test',
+        'year'=>'2002'
+    ],[
+        'id' => 3,
+        'telte' => 'Post kedua',
+        'author' => 'Farah',
+        'publication'=> 'Test',
+        'year'=>'2002'
+    ]];
+    return view('index',[
+        'books'=> $books,
+    ]);
+});
