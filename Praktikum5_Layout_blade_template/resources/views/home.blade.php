@@ -7,9 +7,9 @@
     <title>{{ $title }}</title>
 </head>
 <body>
-    <ul> 
+    <ul>
         <li>
-            <a href="/home">home</a>
+            <a href="/home">Home</a>
         </li>
         <li>
             <a href="/profile">Profile</a>
@@ -18,7 +18,7 @@
             <a href="/about">About</a>
         </li>
     </ul>
-    <h1>HOME</h1>
-    <p>Ini Adalah Halaman Home</p>
+    <h1>{{ $title }}</h1>
+    <p>Ini Adalah Halaman {{ $title }}</p>
 </body>
 </html>

@@ -7,57 +7,58 @@
     <title>Daftar Mahasiswa</title>
 </head>
 <body>
-    {{-- <h1>Daftar Mahasiswa</h1>
+    <h1>Daftar Mahasiswa</h1>
     <ol>
         <li>Farah Salsabila</li>
         <li>Khairul Khazil</li>
         <li>Anisa Salwa</li>
-        <li>Sepkha Wulan Dari</li>  --}}
+        <li>Sepkha Wulan Dari</li>  
 
-        {{-- <h1>Daftar Mahasiswa</h1>
+        <h1>Daftar Mahasiswa</h1>
         <ol>
         <li><?php echo $mahasiswa01; ?></li>
         <li>Khairul Khazil</li>
         <li>Anisa Salwa</li>
         <li>Sepkha Wulan Dari</li>
-        <ol>  --}}
+        <ol>  
 
-        {{-- <h1>Daftar Mahasiswa</h1>
+      <h1>Daftar Mahasiswa</h1>
         <ol>
         <li><?php echo $mahasiswa01; ?></li>
         <li><?php echo $mahasiswa02; ?></li>
         <li><?php echo $mahasiswa03; ?></li>
         <li><?php echo $mahasiswa04; ?></li>
-    </ol>    --}}
+    </ol>    
 
-     {{-- <h1>Daftar Mahasiswa</h1>
+     <h1>Daftar Mahasiswa</h1>
         <ol>
         <li><?php echo $mahasiswa[0]; ?></li>
         <li><?php echo $mahasiswa[1]; ?></li>
         <li><?php echo $mahasiswa[2]; ?></li>
         <li><?php echo $mahasiswa[3]; ?></li>
-    </ol>   --}}
+    </ol>  
 
-    {{-- <h1>Daftar Mahasiswa</h1>
+    <h1>Daftar Mahasiswa</h1>
     <ol>
         <?php foreach ($mahasiswa as $nama){
             echo "<li>$nama</li>";
         }
         ?>
-    </ol>   --}}
+    </ol>   
 
-   {{-- <h1>Daftar Mahasiswa</h1>
+   <h1>Daftar Mahasiswa</h1>
     <ol>
         <li><?php echo $mahasiswa01; ?></li>
-    </ol>   --}}
+    </ol>  
 
-    {{-- <h1>Daftar Mahasiswa</h1>
+     <h1>Daftar Mahasiswa</h1>
     <ol>
         <?php foreach ($mahasiswa as $nama){
             echo "<li>$nama</li>";
         }
         ?>
-    </ol>   --}}
+    </ol> 
+
     <div class="container text-center mt-3 pt-3 bf-white">
         <h1 class="bg-dark px-3 py-1 text-white d-inline-block">
             {{ $nama }}

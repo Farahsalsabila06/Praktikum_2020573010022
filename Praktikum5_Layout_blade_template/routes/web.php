@@ -16,35 +16,43 @@ Route::get('/', function () {
 });
 
 /*
-    Route::get('/mahasiswa', function(){
-        $nama='<u>Farah Salsabila';
-        $nilai=75;
-        return view('mahasiswa',compact('nama','nilai'));
-    });
-    
-    Route::get('/mahasiswa', function(){
-        $nama='Farah Salsabila';
-        $nilai=75;
-        return view('mahasiswa',compact('nama','nilai'));
-    });
-    
-    //perulangan foreach
-    Route::get('/mahasiswa', function(){
-        $nama='Farah Salsabila';
-        $nilai=[80,64,30,76,95];
-        return view('mahasiswa',compact('nama','nilai'));
-    });
-    
-    
-    //perintah continue dan break
-    Route::get('/mahasiswa', function(){
-        $nama='Farah Salsabila';
-        $nilai=[80,64,30,76,95];
-        return view('mahasiswa',compact('nama','nilai'));
-    });
-    */
+//  menampilkan data
+Route::get('/mahasiswa', function(){
+    $nama='Farah Salsabila';
+    $nilai=75;
+    return view('mahasiswa',compact('nama','nilai'));
+});
 
-    
+
+Route::get('/mahasiswa', function(){
+    $nama='<u>Farah Salsabila';
+    $nilai=75;
+    return view('mahasiswa',compact('nama','nilai'));
+});
+
+Route::get('/mahasiswa', function(){
+    $nama='Farah Salsabila';
+    $nilai=75;
+    return view('mahasiswa',compact('nama','nilai'));
+});
+
+//perulangan foreach
+Route::get('/mahasiswa', function(){
+    $nama='Farah Salsabila';
+    $nilai=[80,64,30,76,95];
+    return view('mahasiswa',compact('nama','nilai'));
+});
+
+
+//perintah continue dan break
+Route::get('/mahasiswa', function(){
+    $nama='Farah Salsabila';
+    $nilai=[80,64,30,76,95];
+    return view('mahasiswa',compact('nama','nilai'));
+});
+*/
+
+// Layout blade   
 Route::get('/', function (){
     $books = [[
         'id' => 2,
