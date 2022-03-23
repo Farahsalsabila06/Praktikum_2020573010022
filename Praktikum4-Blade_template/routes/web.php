@@ -28,7 +28,6 @@ Route::get('/mahasiswa', function(){
 });
 
 
-/*
 Route::get('/mahasiswa', function(){
     $nama='<u>Farah Salsabila';
     $nilai=75;
@@ -55,4 +54,4 @@ Route::get('/mahasiswa', function(){
     $nilai=[80,64,30,76,95];
     return view('mahasiswa',compact('nama','nilai'));
 });
-*/
+
