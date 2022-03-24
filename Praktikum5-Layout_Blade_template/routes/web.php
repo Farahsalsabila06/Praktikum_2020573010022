@@ -1,5 +1,7 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,9 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route bawaan laravel
+
+
+//Route Bawaan Laravel
+
 Route::get('/', function () {
-    return view('welcome');
+return view('welcome');
 });
 
 /*
@@ -52,22 +57,24 @@ Route::get('/mahasiswa', function(){
 });
 */
 
-// Layout blade   
-Route::get('/', function (){
-    $books = [[
-        'id' => 2,
-        'title' => 'Post Pertama',
-        'author' => 'Farah Salsabila',
-        'publication' => 'Test',
-        'year' => '2002'
-    ],[
-        'id' => 3,
-        'title' => 'Post Kedua',
-        'author' => 'Farah Salsabila',
-        'publication' => 'Test',
-        'year' => '2002'
-    ]];
-    return view('index',[
-        'books' => $books,
-    ]);
+
+// Layout blade 
+Route::get('mahasiswa1',function(){
+    $arrMahasiswa = ["Farah Salsabila", "Sarah Ayu", "Fika Adila"];
+    return view('mahasiswa1')->with('mahasiswa',$arrMahasiswa);
 });
+
+Route::get('dosen',function(){
+    $arrDosen = ["Maya Fitrianti,M.M", "Prof.Silvia Nst, M.Farm", "Dr.Umar Agustinus","Dr. Syahrial, M.kom"];
+    return view('dosen')->with('dosen',$arrDosen);
+});
+
+Route::get('gallery',function(){
+    return view('gallery');
+});
+
+Route::get('admin', function () {
+    return view('admin');
+});
+
+

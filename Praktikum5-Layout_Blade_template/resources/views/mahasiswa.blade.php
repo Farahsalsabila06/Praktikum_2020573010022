@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -211,4 +211,6 @@
     {{-- <div> copyright &copy; <?php echo date("Y"); ?>Program Studi Teknik Informatika - PNL </div> --}}
     </ol>
 </body>
-</html>
+</html> --}}
+
+
