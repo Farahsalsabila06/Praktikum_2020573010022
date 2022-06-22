@@ -20,6 +20,18 @@ Route::get('/', function () {
 });
 
 Route::get('/cek-object', [MahasiswaController::class, 'cekObject']);
+Route::get('/insert', [MahasiswaController::class, 'insert']);
+Route::get('/massAssignment', [MahasiswaController::class, 'massAssignment']);
+
+Route::get('/massAssignment2', [MahasiswaController::class, 'massAssignment2']);
+Route::get('/update', [MahasiswaController::class, 'update']);
+Route::get('/massUpdate', [MahasiswaController::class, 'massUpdate']);
+
+Route::get('/delete', [MahasiswaController::class, 'delete']);
+Route::get('/massdelete', [MahasiswaController::class, 'massdelete']);
+Route::get('/all', [MahasiswaController::class, 'all']);
+
+Route::get('/allview', [MahasiswaController::class, 'allview']);
 
 // controller manual
 // Route::get('/', [PageController::class, 'index']);
