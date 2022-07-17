@@ -6,10 +6,6 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
-<<<<<<< HEAD
-=======
-        "fruitcake/laravel-cors": "^2.0",
->>>>>>> 4a104f4acb760fd8aae7b9de46ed32d2bbad5739
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^2.14.1",
@@ -21,12 +17,8 @@
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
-<<<<<<< HEAD
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ignition": "^1.0"
-=======
-        "phpunit/phpunit": "^9.5.10"
->>>>>>> 4a104f4acb760fd8aae7b9de46ed32d2bbad5739
     },
     "autoload": {
         "psr-4": {
