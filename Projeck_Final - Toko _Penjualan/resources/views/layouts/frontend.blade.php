@@ -74,7 +74,7 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <h4>Butuh Bantuan</h4>
-                        <p class="pt-2">08:00 - 17:00 WIB / (Senin - Jumat)</p>
+                        <p class="pt-2">08:00 - 18:00 WIB / (Senin - Sabtu)</p>
                         <i class="fas fa-envelope-square me-2"></i> {{ $profil->email }}
                         <br>
                         <i class="fas fa-map-marker-alt me-2"></i> {{ $profil->address }}
