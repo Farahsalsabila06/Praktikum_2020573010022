@@ -65,3 +65,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 # toko-app
  Toko Online Laravel 9
+
+# login admin 
+ Email : farahsalsabila@gmail.com
+ passwoard : farah19
